@@ -6,23 +6,23 @@
 
 
 # master01 ip address
-export K8SHA_IP1=10.73.71.25
+export K8SHA_IP1=10.10.5.70
 
 # master02 ip address
-export K8SHA_IP2=10.73.71.26
+export K8SHA_IP2=10.10.5.71
 
 # master03 ip address
-export K8SHA_IP3=10.73.71.27
+export K8SHA_IP3=10.10.5.72
 
 
 # master01 hostname
-export K8SHA_HOSTNAME1=master01
+export K8SHA_HOSTNAME1=kube-master1
 
 # master02 hostname
-export K8SHA_HOSTNAME2=master02
+export K8SHA_HOSTNAME2=kube-master2
 
 # master03 hostname
-export K8SHA_HOSTNAME3=master03
+export K8SHA_HOSTNAME3=kube-master3
 
 #etcd tocken:
 export ETCD_TOKEN=9489bf67bdfe1b3ae077d6fd9e7efefd
@@ -55,11 +55,11 @@ if [[ $1 == 'etcd' ]] || [[ $1 == 'all' ]]; then
 fi
 
 if [[ $1 == 'docker' ]]; then
-  if [[ $(hostname) == master01 ]]; then
+  if [[ $(hostname) == kube-master1 ]]; then
   etcd_host=etcd1
-  elif [[ $(hostname) == master02 ]]; then
+  elif [[ $(hostname) == kube-master2 ]]; then
   etcd_host=etcd2
-  elif [[ $(hostname) == master03 ]]; then
+  elif [[ $(hostname) == kube-master3 ]]; then
   etcd_host=etcd3
 fi
   sed \
