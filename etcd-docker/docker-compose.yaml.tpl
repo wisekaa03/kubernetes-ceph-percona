@@ -18,7 +18,7 @@ services:
       --initial-advertise-peer-urls=http://IPLOCAL:2380 \
       --listen-peer-urls=http://0.0.0.0:2380 \
       --initial-cluster-token=ETCD_TOKEN \
-      --initial-cluster=etcd1=http://K8SHA_IP1:2380,etcd2=http://K8SHA_IP2:2380,etcd3=http://K8SHA_IP3:2380
+      --initial-cluster=etcd1=http://K8SHA_IP1:2380,etcd2=http://K8SHA_IP2:2380
       --auto-tls \
       --peer-auto-tls \
       --data-dir=/var/lib/etcd"]
